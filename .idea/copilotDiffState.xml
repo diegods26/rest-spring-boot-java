@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/rest-spring-boot-java/src/main/resources/application.yaml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/rest-spring-boot-java/src/main/resources/application.yaml" />
+              <option name="originalContent" value="spring:&#10;  application:&#10;    name: rest-spring-boot-java&#10;  profiles:&#10;    active: dev&#10;  datasource:&#10;    driver-class-name: com.mysql.cj.jdbc.Driver&#10;    url: jdbc:mysql://localhost:3306/user_rest_api?useTimezone=true&amp;serverTimezone=UTC&#10;    username: ${USER_DB}&#10;    password: ${PASSWORD_DB}&#10;  jpa:&#10;    hibernate:&#10;      ddl-auto: update&#10;    properties:&#10;      hibernate:&#10;        dialect: org.hibernate.dialect.MySQLDialect&#10;  logging:&#10;    level:&#10;      org:&#10;        springframework:&#10;          web: WARN&#10;" />
+              <option name="updatedContent" value="spring:&#10;  application:&#10;    name: rest-spring-boot-java&#10;  profiles:&#10;    active: dev&#10;  datasource:&#10;    driver-class-name: com.mysql.cj.jdbc.Driver&#10;    url: jdbc:mysql://localhost:3306/user_rest_api?useTimezone=true&amp;serverTimezone=UTC&#10;    username: ${USER_DB}&#10;    password: ${PASSWORD_DB}&#10;  jpa:&#10;    hibernate:&#10;      ddl-auto: update&#10;    properties:&#10;      hibernate:&#10;        dialect: org.hibernate.dialect.MySQLDialect&#10;  logging:&#10;    level:&#10;      org:&#10;        springframework:&#10;          web: WARN&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

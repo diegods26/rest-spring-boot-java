@@ -3,6 +3,8 @@ package br.com.diegopimenta.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Entity
 @Table(name = "users")
@@ -17,4 +19,6 @@ public class User {
     private String email;
     @Column(nullable = false, length = 20)
     private String gender;
+    @Column(nullable = true)
+    private Date birthDate;
 }
