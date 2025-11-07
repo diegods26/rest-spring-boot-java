@@ -1,5 +1,6 @@
 package br.com.diegopimenta.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,5 +21,6 @@ public class User {
     @Column(nullable = false, length = 20)
     private String gender;
     @Column(nullable = true)
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date birthDate;
 }

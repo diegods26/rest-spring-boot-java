@@ -10,6 +10,7 @@ public class CustomMapper {
     public UserDtoV2 entityToDTO(User user) {
         UserDtoV2 dto = new UserDtoV2();
 
+        dto.setId(user.getId());
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());
         dto.setGender(user.getGender());
