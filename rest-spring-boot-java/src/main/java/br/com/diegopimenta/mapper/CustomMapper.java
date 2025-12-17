@@ -1,5 +1,6 @@
 package br.com.diegopimenta.mapper;
 
+import br.com.diegopimenta.dto.UserDTO;
 import br.com.diegopimenta.dto.UserDtoV2;
 import br.com.diegopimenta.model.User;
 import org.springframework.stereotype.Service;
@@ -7,9 +8,31 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomMapper {
 
-    public UserDtoV2 entityToDTO(User user) {
-        UserDtoV2 dto = new UserDtoV2();
+    public UserDTO entityToDTO(User user) {
+        if (user == null) return null;
 
+        UserDTO dto = new UserDTO();
+        dto.setId(user.getId());
+        dto.setName(user.getName());
+        dto.setEmail(user.getEmail());
+        dto.setGender(user.getGender());
+        return dto;
+    }
+
+    public User dtoToEntity(UserDTO user) {
+        if (user == null) return null;
+
+        User entity = new User();
+        entity.setName(user.getName());
+        entity.setEmail(user.getEmail());
+        entity.setGender(user.getGender());
+        return entity;
+    }
+
+    public UserDtoV2 entityToDTOV2(User user) {
+        if (user == null) return null;
+
+        UserDtoV2 dto = new UserDtoV2();
         dto.setId(user.getId());
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());
@@ -19,8 +42,9 @@ public class CustomMapper {
     }
 
     public User dtoToEntity(UserDtoV2 user) {
-        User entity = new User();
+        if (user == null) return null;
 
+        User entity = new User();
         entity.setName(user.getName());
         entity.setEmail(user.getEmail());
         entity.setGender(user.getGender());

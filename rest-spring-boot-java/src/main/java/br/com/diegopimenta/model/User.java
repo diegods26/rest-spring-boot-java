@@ -3,13 +3,16 @@ package br.com.diegopimenta.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.util.Date;
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "users")
-public class User {
+public class User extends RepresentationModel<User> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
